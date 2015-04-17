@@ -2,7 +2,7 @@ module ApplicationHelper
 
 
   def full_title(page_title = '')
-    base_title = "Breathe, a network of respiratory scientists"
+    base_title = "The Lung Sounds Project"
     if page_title.empty?
       base_title
     else
