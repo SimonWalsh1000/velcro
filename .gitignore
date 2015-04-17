@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+#pesky idea files
+/.idea/workspace.xml
+/.idea/tasks.xml
+.DS_Store
