@@ -22,6 +22,7 @@ gem 'nokogiri', '~> 1.6.6.2'
 gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'simple_form'
 
 
 group :development, :test do
@@ -31,6 +32,8 @@ group :development, :test do
   gem 'spring',      '1.1.3'
   gem 'annotate', '~> 2.6.8'
   gem 'sunspot_solr'
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :test do

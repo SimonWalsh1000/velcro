@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= debug(params) %>
+<p>
+  <strong>Abnormal:</strong>
+  <%= @patient.abnormal %>
+</p>
+
+<p>
+  <strong>Fibrosis:</strong>
+  <%= @patient.fibrosis %>
+</p>
+
+<p>
+  <strong>Tbx:</strong>
+  <%= @patient.tbx %>
+</p>
+
+<p>
+  <strong>Hcying:</strong>
+  <%= @patient.hcying %>
+</p>
+
+<p>
+  <strong>Gg:</strong>
+  <%= @patient.gg %>
+</p>
+
+<p>
+  <strong>Ret:</strong>
+  <%= @patient.ret %>
+</p>
+
+<p>
+  <strong>Emph:</strong>
+  <%= @patient.emph %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @patient.user %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

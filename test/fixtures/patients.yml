@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  abnormal: 1
+  fibrosis: 1
+  tbx: 1
+  hcying: 1
+  gg: 1
+  ret: 1
+  emph: 1
+  user_id: 
+
+two:
+  abnormal: 1
+  fibrosis: 1
+  tbx: 1
+  hcying: 1
+  gg: 1
+  ret: 1
+  emph: 1
+  user_id: 

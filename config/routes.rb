@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
 
 
-  get 'home/index'
+  resources :patients
 
   devise_for :users
-  root to: "home#index"
+
+  devise_scope :user do
+    authenticated :user do
+      root :to => "patients#new", as: :authenticated_root
+    end
+    unauthenticated :member do
+      root :to => 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
 
 
 

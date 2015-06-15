@@ -1,5 +1,4 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -55,6 +54,17 @@ h2 {
   font-weight: normal;
   color: $gray-light;
 }
+
+h3 {
+  font-size: 1.1em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -75,6 +85,21 @@ p {
     text-decoration: none;
   }
 }
+
+
+.patterns {
+  padding:0px 0px 10px 0px;
+ }
+
+.name {
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+input[type="radio"] {
+  margin:0px 10px !important;
+}
+
 
 /* footer */
 footer {
