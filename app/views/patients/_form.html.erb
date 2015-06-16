@@ -2,105 +2,105 @@
 
     <h3>[Remember, if you select nothing, it means you are saying that abnormality is not present]</h3>
 
-  <% if @patient.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
-      <ul>
-      <% @patient.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-    <div class = "patterns">
-          <div class="field">
-            <%= check_box_tag(:abnormal, 1) %>
-            <%= label_tag(:abnormal, "Abnormal (Y/N)") %>
-          </div>
-    </div>
-      <div class = "patterns">
-          <div class="field">
-            <%= check_box_tag(:fibrosis, 1) %>
-            <%= label_tag(:age_adult, "Fibrosis present (Y/N)") %>
-          </div>
-      </div>
-    <div class = "patterns">
-        <div class="field name">
-          <b>Traction bronchiectasis</b>
+    <% if @patient.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+          <ul>
+            <% @patient.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
         </div>
+    <% end %>
+    <div class = "patterns">
       <div class="field">
-        <%= radio_button_tag(:tbx, 1) %>
+        <%= f.check_box :abnormal, :value => 1 %>
+        <%= label_tag(:abnormal, "Abnormal (Y/N)") %>
+      </div>
+    </div>
+    <div class = "patterns">
+      <div class="field">
+        <%= f.check_box :fibrosis, :value => 1 %>
+        <%= label_tag(:age_adult, "Fibrosis present (Y/N)") %>
+      </div>
+    </div>
+    <div class = "patterns">
+      <div class="field name">
+        <b>Traction bronchiectasis</b>
+      </div>
+      <div class="field">
+        <%= f.radio_button :tbx, :value => 1 %>
         <%= label_tag(:tbx, "Mild") %>
-        <%= radio_button_tag(:tbx, 2) %>
+        <%= f.radio_button :tbx, :value => 2 %>
         <%= label_tag(:tbx, "Moderate") %>
-        <%= radio_button_tag(:tbx, 3) %>
+        <%= f.radio_button :tbx, :value => 3 %>
         <%= label_tag(:tbx, "Severe") %>
       </div>
     </div>
     <div class = "patterns">
-        <div class="field name">
-          <b>Honeycombing</b>
-        </div>
-        <div class="field">
-          <%= radio_button_tag(:hcying, 1) %>
-          <%= label_tag(:hcying, "<25%") %>
-          <%= radio_button_tag(:hcying, 2) %>
-          <%= label_tag(:hcying, "25%-50%") %>
-          <%= radio_button_tag(:hcying, 3) %>
-          <%= label_tag(:hcying, "50%-75%") %>
-          <%= radio_button_tag(:hcying, 4) %>
-          <%= label_tag(:hcying, ">75%") %>
-        </div>
+      <div class="field name">
+        <b>Honeycombing</b>
+      </div>
+      <div class="field">
+        <%= f.radio_button :hcying, :value => 1 %>
+        <%= label_tag(:hcying, "<25%") %>
+        <%= f.radio_button :hcying, :value => 2 %>
+        <%= label_tag(:hcying, "25%-50%") %>
+        <%= f.radio_button :hcying, :value => 3 %>
+        <%= label_tag(:hcying, "50%-75%") %>
+        <%= f.radio_button :hcying, :value => 4 %>
+        <%= label_tag(:hcying, ">75%") %>
+      </div>
     </div>
     <div class = "patterns">
       <div class="field name">
-          <b>Ground-glass opacification</b>
-        </div>
-        <div class="field">
-          <%= radio_button_tag(:gg, 1) %>
-          <%= label_tag(:gg, "<25%") %>
-          <%= radio_button_tag(:gg, 2) %>
-          <%= label_tag(:gg, "25%-50%") %>
-          <%= radio_button_tag(:gg, 3) %>
-          <%= label_tag(:gg, "50%-75%") %>
-          <%= radio_button_tag(:gg, 4) %>
-          <%= label_tag(:gg, ">75%") %>
-        </div>
+        <b>Ground-glass opacification</b>
+      </div>
+      <div class="field">
+        <%= f.radio_button :gg, :value => 1 %>
+        <%= label_tag(:gg, "<25%") %>
+        <%= f.radio_button :gg, :value => 2 %>
+        <%= label_tag(:gg, "25%-50%") %>
+        <%= f.radio_button :gg, :value => 3 %>
+        <%= label_tag(:gg, "50%-75%") %>
+        <%= f.radio_button :gg, :value => 4 %>
+        <%= label_tag(:gg, ">75%") %>
+      </div>
     </div>
     <div class = "patterns">
       <div class="field name">
-          <b>Reticulation</b>
-        </div>
-        <div class="field">
-          <%= radio_button_tag(:ret, 1) %>
-          <%= label_tag(:ret, "<25%") %>
-          <%= radio_button_tag(:ret, 2) %>
-          <%= label_tag(:ret, "25%-50%") %>
-          <%= radio_button_tag(:ret, 3) %>
-          <%= label_tag(:ret, "50%-75%") %>
-          <%= radio_button_tag(:ret, 4) %>
-          <%= label_tag(:ret, ">75%") %>
-        </div>
+        <b>Reticulation</b>
+      </div>
+      <div class="field">
+        <%= f.radio_button :ret, :value => 1 %>
+        <%= label_tag(:ret, "<25%") %>
+        <%= f.radio_button :ret, :value => 2 %>
+        <%= label_tag(:ret, "25%-50%") %>
+        <%= f.radio_button :ret, :value => 3 %>
+        <%= label_tag(:ret, "50%-75%") %>
+        <%= f.radio_button :ret, :value => 4 %>
+        <%= label_tag(:ret, ">75%") %>
+      </div>
     </div>
     <div class = "patterns">
       <div class="field name">
-          <b>Emphysema</b>
-        </div>
-        <div class="field">
-          <%= radio_button_tag(:emph, 1) %>
-          <%= label_tag(:emph, "<25%") %>
-          <%= radio_button_tag(:emph, 2) %>
-          <%= label_tag(:emph, "25%-50%") %>
-          <%= radio_button_tag(:emph, 3) %>
-          <%= label_tag(:emph, "50%-75%") %>
-          <%= radio_button_tag(:emph, 4) %>
-          <%= label_tag(:emph, ">75%") %>
-        </div>
+        <b>Emphysema</b>
+      </div>
+      <div class="field">
+        <%= f.radio_button :emph, :value => 1 %>
+        <%= label_tag(:emph, "<25%") %>
+        <%= f.radio_button :emph, :value => 2 %>
+        <%= label_tag(:emph, "25%-50%") %>
+        <%= f.radio_button :emph, :value => 3 %>
+        <%= label_tag(:emph, "50%-75%") %>
+        <%= f.radio_button :emph, :value => 4 %>
+        <%= label_tag(:emph, ">75%") %>
+      </div>
     </div>
 
+    <%= f.hidden_field :user_id, :value => current_user.id %>
 
-
-  <div class="actions">
-    <%= f.submit "Submit", class: "btn btn-primary" %>
-  </div>
+    <div class="actions">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
 <% end %>

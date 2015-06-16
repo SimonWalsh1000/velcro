@@ -8,10 +8,9 @@ class CreatePatients < ActiveRecord::Migration
       t.integer :gg
       t.integer :ret
       t.integer :emph
-      t.references :user, index: true
+      t.integer :user_id
 
       t.timestamps null: false
     end
-    add_foreign_key :patients, :users
   end
 end

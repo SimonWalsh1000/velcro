@@ -39,7 +39,8 @@
 
 <p>
   <strong>User:</strong>
-  <%= @patient.user %>
+  <%= @patient.user.email %>
+  <%= @patient.user.last_case %>
 </p>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
