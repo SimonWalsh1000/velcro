@@ -110,7 +110,8 @@ footer {
   a {
     color: $gray;
     &:hover {
-      color: $gray-darker;
+      color: $gray;
+      background-color: transparent !important;
     }
   }
   small {
