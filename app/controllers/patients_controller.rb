@@ -29,9 +29,9 @@ class PatientsController < ApplicationController
     # @patient.user_id = current_user.id
     respond_to do |format|
       if @patient.save
-        # current_user.update_attribute(:last_case, current_user.last_case + 1)
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
-        format.json { render :show, status: :created, location: @patient }
+        flash['success'] = "Patient sucessfully scored"
+        format.html { redirect_to new_patient_path}
+        format.json { render :new, status: :created, location: @patient }
       else
         format.html { render :new }
         format.json { render json: @patient.errors, status: :unprocessable_entity }
