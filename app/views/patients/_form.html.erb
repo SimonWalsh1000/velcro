@@ -1,6 +1,5 @@
 <%= simple_form_for(@patient) do |f| %>
 
-    <h3>[Remember, if you select nothing, it means you are saying that abnormality is not present]</h3>
 
     <% if @patient.errors.any? %>
         <div id="error_explanation">
@@ -101,6 +100,7 @@
     </div>
 
     <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :case_number, :value => @case_number %>
 
     <div class="actions">
       <%= f.submit "Submit", class: "btn btn-primary" %>
