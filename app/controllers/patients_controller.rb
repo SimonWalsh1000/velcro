@@ -16,6 +16,13 @@ class PatientsController < ApplicationController
   def new
     @patient = Patient.new
     @case_number = current_user.define_case_number
+    if @case_number == 1102
+      redirect_to finished_patients_path
+    end
+  end
+
+  def finished
+    render 'finished'
   end
 
   # GET /patients/1/edit
@@ -26,10 +33,8 @@ class PatientsController < ApplicationController
   # POST /patients.json
   def create
     @patient = Patient.new(patient_params)
-    # @patient.user_id = current_user.id
     respond_to do |format|
       if @patient.save
-        flash['success'] = "Patient sucessfully scored"
         format.html { redirect_to new_patient_path}
         format.json { render :new, status: :created, location: @patient }
       else
@@ -44,7 +49,6 @@ class PatientsController < ApplicationController
   def update
     respond_to do |format|
       if @patient.update(patient_params)
-        format.html { redirect_to @patient, notice: 'Patient was successfully updated.' }
         format.json { render :show, status: :ok, location: @patient }
       else
         format.html { render :edit }
@@ -58,7 +62,6 @@ class PatientsController < ApplicationController
   def destroy
     @patient.destroy
     respond_to do |format|
-      format.html { redirect_to patients_url, notice: 'Patient was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

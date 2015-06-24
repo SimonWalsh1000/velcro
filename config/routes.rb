@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
 
-  resources :patients
+  resources :patients do
+    collection do
+      get :finished
+    end
+  end
+
 
   devise_for :users
 

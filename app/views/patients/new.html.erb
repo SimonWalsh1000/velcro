@@ -1,13 +1,16 @@
 <h2>Case number <%= @case_number %></h2>
 
-<h4>[Remember, if you select nothing, it means you are saying that abnormality is not present]</h4>
+<div class = "row">
+    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+        <div class="Warning">[Remember, if you select nothing, it means you are saying that abnormality is not present]</div>
+    </div>
+</div>
 
 <div class="col-md-5 col-sm-5 col-xs-12">
 
     <div class = "ImageHolder">
-        <%= image_tag "https://s3-us-west-2.amazonaws.com/lsproject/#{@case_number}.jpg"%>
+        <%= image_tag "#{@case_number}.jpg"%>
     </div>
-
 
 </div>
 
