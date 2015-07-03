@@ -6,7 +6,7 @@ class Patient < ActiveRecord::Base
 
   def update_user
     user = self.user
-    if user.last_case.blank?
+    if user.last_case.nil?
       user.last_case = 1
       user.save
     else
