@@ -151,6 +151,7 @@ input[type="radio"] {
   margin: 0px auto !important;
   img {
     width:100%;
+    margin-top: 50px;
     margin-bottom: 50px;
   }
 }
@@ -161,11 +162,16 @@ input[type="radio"] {
 
 
 .Warning {
-  font-size: 1.2em;
+  width:60%;
+  font-size: 1em;
   line-height: 150%;
-  margin-bottom: 20px;
-  text-align: center;
+  margin:20px auto;
   color:$gray-dark;
+}
+
+
+.radio {
+  display: inline;
 }
 
 

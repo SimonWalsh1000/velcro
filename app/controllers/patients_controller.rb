@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show, :edit, :update, :destroy]
+  before_action :set_patient, only: [:show, :edit, :update, :destroy, :clear]
 
   # GET /patients
   # GET /patients.json
@@ -26,6 +26,7 @@ class PatientsController < ApplicationController
     end
 
   end
+
 
   def finished
     render 'finished'

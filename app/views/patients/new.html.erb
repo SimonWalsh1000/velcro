@@ -1,10 +1,9 @@
 <h2>Case number <%= @case_number %></h2>
-
-<div class = "row">
-    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-        <div class="Warning">[Remember, if you select nothing, it means you are saying that abnormality is not present]</div>
-    </div>
-</div>
+<ol class="Warning">
+  <li>Remember, if you select nothing, it means you are saying that abnormality is not present.</li>
+  <li>By unselecting the "abnormal" checkbox, you can unselect all other selections.</li>
+  <li>The abnormal checkbox will automatically check if you select any pattern and the fibrosis checkbox will automatically check if you select Tbx or Hcying.</li>
+</ol>
 
 <div class="col-md-5 col-sm-5 col-xs-12">
 
@@ -18,27 +17,6 @@
     <%= render 'form' %>
    </div>
 
-  <div class = "FormHolder">
-    <%= @previous.case_number %>
-    user
-    <%= @previous.user_id %>
-    abnormal
-    <%= @previous.abnormal %>
-    fibrosis
-    <%= @previous.fibrosis %>
-    tbx
-    <%= @previous.tbx %>
-    hcying
-    <%= @previous.hcying %>
-    gg
-    <%= @previous.gg %>
-    ret
-    <%= @previous.ret%>
-    emph
-    <%= @previous.emph %>
-  </div>
-
-
-
-
 </div>
+
+

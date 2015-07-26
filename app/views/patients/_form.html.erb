@@ -8,7 +8,7 @@
     </div>
     <div class = "patterns">
       <div class="field">
-        <%= f.check_box :fibrosis, :value => 1 %>
+        <%= f.check_box :fibrosis, :value => 1, :class => "radio" %>
         <%= label_tag(:age_adult, "Fibrosis present (Y/N)") %>
       </div>
     </div>
@@ -17,11 +17,11 @@
         <b>Traction bronchiectasis</b>
       </div>
       <div class="field">
-        <%= f.radio_button :tbx, 1 %>
+        <%= f.radio_button :tbx, 1, :class => "radio" %>
         <%= label_tag(:tbx, "Mild") %>
-        <%= f.radio_button :tbx, 2 %>
+        <%= f.radio_button :tbx, 2, :class => "radio" %>
         <%= label_tag(:tbx, "Moderate") %>
-        <%= f.radio_button :tbx, 3 %>
+        <%= f.radio_button :tbx, 3, :class => "radio" %>
         <%= label_tag(:tbx, "Severe") %>
       </div>
     </div>
@@ -30,13 +30,13 @@
         <b>Honeycombing</b>
       </div>
       <div class="field">
-        <%= f.radio_button :hcying, 1 %>
+        <%= f.radio_button :hcying, 1, :class => "radio" %>
         <%= label_tag(:hcying, "<25%") %>
-        <%= f.radio_button :hcying, 2 %>
+        <%= f.radio_button :hcying, 2, :class => "radio" %>
         <%= label_tag(:hcying, "25%-50%") %>
-        <%= f.radio_button :hcying, 3 %>
+        <%= f.radio_button :hcying, 3, :class => "radio" %>
         <%= label_tag(:hcying, "50%-75%") %>
-        <%= f.radio_button :hcying, 4 %>
+        <%= f.radio_button :hcying, 4, :class => "radio" %>
         <%= label_tag(:hcying, ">75%") %>
       </div>
     </div>
@@ -45,13 +45,13 @@
         <b>Ground-glass opacification</b>
       </div>
       <div class="field">
-        <%= f.radio_button :gg,  1 %>
+        <%= f.radio_button :gg,  1, :class => "radio" %>
         <%= label_tag(:gg, "<25%") %>
-        <%= f.radio_button :gg, 2 %>
+        <%= f.radio_button :gg, 2, :class => "radio" %>
         <%= label_tag(:gg, "25%-50%") %>
-        <%= f.radio_button :gg,  3 %>
+        <%= f.radio_button :gg,  3, :class => "radio" %>
         <%= label_tag(:gg, "50%-75%") %>
-        <%= f.radio_button :gg,  4 %>
+        <%= f.radio_button :gg,  4, :class => "radio" %>
         <%= label_tag(:gg, ">75%") %>
       </div>
     </div>
@@ -60,13 +60,13 @@
         <b>Reticulation</b>
       </div>
       <div class="field">
-        <%= f.radio_button :ret,  1 %>
+        <%= f.radio_button :ret,  1, :class => "radio" %>
         <%= label_tag(:ret, "<25%") %>
-        <%= f.radio_button :ret,  2 %>
+        <%= f.radio_button :ret,  2, :class => "radio" %>
         <%= label_tag(:ret, "25%-50%") %>
-        <%= f.radio_button :ret,  3 %>
+        <%= f.radio_button :ret,  3, :class => "radio" %>
         <%= label_tag(:ret, "50%-75%") %>
-        <%= f.radio_button :ret,  4 %>
+        <%= f.radio_button :ret,  4, :class => "radio" %>
         <%= label_tag(:ret, ">75%") %>
       </div>
     </div>
@@ -75,21 +75,20 @@
         <b>Emphysema</b>
       </div>
       <div class="field">
-        <%= f.radio_button :emph,  1 %>
+        <%= f.radio_button :emph,  1, :class => "radio" %>
         <%= label_tag(:emph, "<25%") %>
-        <%= f.radio_button :emph,  2 %>
+        <%= f.radio_button :emph,  2, :class => "radio" %>
         <%= label_tag(:emph, "25%-50%") %>
-        <%= f.radio_button :emph,  3 %>
+        <%= f.radio_button :emph,  3, :class => "radio" %>
         <%= label_tag(:emph, "50%-75%") %>
-        <%= f.radio_button :emph, 4 %>
+        <%= f.radio_button :emph, 4, :class => "radio" %>
         <%= label_tag(:emph, ">75%") %>
       </div>
     </div>
 
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.hidden_field :case_number, :value => @case_number %>
-
-    <div class="actions">
-      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <div class="btn-group" role="group" aria-label="...">
+      <%= f.submit "Submit", class: "btn btn-default" %>
     </div>
 <% end %>
