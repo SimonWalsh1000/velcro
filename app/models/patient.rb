@@ -3,7 +3,6 @@ class Patient < ActiveRecord::Base
 
   before_save  :update_user
 
-
   def update_user
     user = self.user
     if user.last_case.nil?

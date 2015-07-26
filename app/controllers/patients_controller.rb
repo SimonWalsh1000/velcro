@@ -22,7 +22,7 @@ class PatientsController < ApplicationController
     if Patient.where(:case_number => @case_number - 1).blank?
       @previous = nil
     else
-      @previous = Patient.where(:case_number => @case_number - 1)
+      @previous = Patient.where(:case_number => @case_number - 1).first
     end
 
   end

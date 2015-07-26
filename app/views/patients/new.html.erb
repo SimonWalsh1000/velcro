@@ -10,22 +10,35 @@
 
     <div class = "ImageHolder">
         <%= image_tag "#{@case_number}.jpg"%>
-            <% unless @previous.blank? %>
-                  <%= @previous.abnormal %>
-                  <%= @previous.fibrosis %>
-                  <%= @previous.tbx %>
-                  <%= @previous.hcying %>
-                  <%= @previous.gg %>
-                  <%= @previous.ret %>
-                  <%= @previous.emph %>
-                </div>
-            <% end %>
-</div>
+    </div>
 </div>
 <div class="col-md-7 col-sm-7 col-xs-12">
 
    <div class = "FormHolder">
     <%= render 'form' %>
    </div>
+
+  <div class = "FormHolder">
+    <%= @previous.case_number %>
+    user
+    <%= @previous.user_id %>
+    abnormal
+    <%= @previous.abnormal %>
+    fibrosis
+    <%= @previous.fibrosis %>
+    tbx
+    <%= @previous.tbx %>
+    hcying
+    <%= @previous.hcying %>
+    gg
+    <%= @previous.gg %>
+    ret
+    <%= @previous.ret%>
+    emph
+    <%= @previous.emph %>
+  </div>
+
+
+
 
 </div>
