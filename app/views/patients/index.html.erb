@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Case</th>
       <th>Abnormal</th>
       <th>Fibrosis</th>
       <th>Tbx</th>
@@ -20,6 +21,8 @@
   <tbody>
     <% @patients.each do |patient| %>
       <tr>
+        <td><%= patient.case_number %></td>
+        <td><%= patient.abnormal %></td>
         <td><%= patient.abnormal %></td>
         <td><%= patient.fibrosis %></td>
         <td><%= patient.tbx %></td>
@@ -27,7 +30,7 @@
         <td><%= patient.gg %></td>
         <td><%= patient.ret %></td>
         <td><%= patient.emph %></td>
-        <td><%= patient.user %></td>
+        <td><%= patient.user.email %></td>
         <td><%= link_to 'Show', patient %></td>
         <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
         <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
