@@ -42,3 +42,8 @@
 <br>
 
 <%= link_to 'New Patient', new_patient_path %>
+
+<p>
+  Download:
+  <%= link_to "CSV", patients_path(format: "csv") %>
+</p>

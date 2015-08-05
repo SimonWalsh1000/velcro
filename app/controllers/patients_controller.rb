@@ -5,6 +5,11 @@ class PatientsController < ApplicationController
   # GET /patients.json
   def index
     @patients = Patient.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @patients.to_csv }
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
+    end
   end
 
   # GET /patients/1

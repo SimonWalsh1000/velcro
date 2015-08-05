@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:o="urn:schemas-microsoft-com:office:office"
+          xmlns:x="urn:schemas-microsoft-com:office:excel"
+          xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="Number">CASE</Data></Cell>
+        <Cell><Data ss:Type="Number">ABNORMAL</Data></Cell>
+        <Cell><Data ss:Type="Number">FIBROSIS</Data></Cell>
+        <Cell><Data ss:Type="Number">TBX</Data></Cell>
+        <Cell><Data ss:Type="Number">HCYING</Data></Cell>
+        <Cell><Data ss:Type="Number">GGO</Data></Cell>
+        <Cell><Data ss:Type="Number">RET</Data></Cell>
+        <Cell><Data ss:Type="Number">EMPHY</Data></Cell>
+        <Cell><Data ss:Type="Number">USER</Data></Cell>
+
+
+      </Row>
+      <% @patients.each do |patient| %>
+          <Row>
+            <Cell><Data ss:Type="Number"><%= patient.case_number %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= patient.abnormal %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= patient.fibrosis %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= patient.tbx %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= patient.hcying %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= patient.gg %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= patient.ret %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= patient.emph %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= patient.user.email %></Data></Cell>
+          </Row>
+      <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
