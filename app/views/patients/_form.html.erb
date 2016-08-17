@@ -3,13 +3,13 @@
     <div class = "patterns">
       <div class="field">
         <%= f.check_box :abnormal, :value => 1 %>
-        <%= label_tag(:abnormal, "Abnormal (Y/N)") %>
+        <%= label_tag(:abnormal, "Abnormal - if Yes, check the box, otherwise leave blank") %>
       </div>
     </div>
     <div class = "patterns">
       <div class="field">
         <%= f.check_box :fibrosis, :value => 1, :class => "radio" %>
-        <%= label_tag(:age_adult, "Fibrosis present (Y/N)") %>
+        <%= label_tag(:age_adult, "Fibrosis - if Yes, check the box, otherwise leave blank") %>
       </div>
     </div>
     <div class = "patterns">
