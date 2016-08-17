@@ -25,12 +25,11 @@ class PatientsController < ApplicationController
     if @case_number == 475
       redirect_to finished_patients_path
     end
-    if Patient.where(:case_number => @case_number - 1).blank?
-      @previous = nil
-    else
-      @previous = Patient.where(:case_number => @case_number - 1).first
-    end
-
+    # if Patient.where(:case_number => @case_number - 1).blank?
+    #   @previous = nil
+    # else
+    #   @previous = Patient.where(:case_number => @case_number - 1).first
+    # end
   end
 
 

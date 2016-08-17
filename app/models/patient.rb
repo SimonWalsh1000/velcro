@@ -1,4 +1,5 @@
 class Patient < ActiveRecord::Base
+
   belongs_to :user
 
   before_save  :update_user

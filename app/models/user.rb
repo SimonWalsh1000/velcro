@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     if self.last_case.blank?
       1
     else
-      self.last_case
+      self.last_case == 1 ? 2 : self.last_case + 1
     end
   end
 end
